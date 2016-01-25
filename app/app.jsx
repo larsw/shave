@@ -1,20 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+// import components
+import {Hello} from './components/Hello'
+import {Yo} from './components/Yo'
 
-class Yo extends React.Component {
-  render() {
-      return (<div>
-                <h2>Yo!</h2>
-              </div>);
-  }
-}
+import { store } from './store/createStore'
 
-const Hello = (props) => {
-  return (<div className="jumbotron">
-            <h1>Hello</h1>
-            {props.children || <div />}
-          </div>);
-}
-
-ReactDOM.render(<Hello><Yo /></Hello>,
+ReactDOM.render(<Provider store={store}>
+                  <Hello>
+                    <Yo />
+                  </Hello>
+                </Provider>,
                 document.getElementById('app-container'))
