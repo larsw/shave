@@ -7,7 +7,7 @@ module.exports = {
         'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
         'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
         'bootstrap-loader',
-        path.resolve(__dirname, "app", "app.js")],
+        path.resolve(__dirname, "app", "app.jsx")],
     output: {
         filename: "bundle.js",
         path: __dirname
