@@ -19,7 +19,6 @@ const Hello = (props) => {
 ReactDOM.render(<Hello><Yo /></Hello>,
                 document.getElementById('app-container'))
 
-                
 var $ = require('jquery');
 
 console.log('Getting ready...');
