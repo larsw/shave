@@ -7,4 +7,15 @@ import { rootReducer } from '../reducers'
 const reduxRouterMiddleware = syncHistory(browserHistory)
 const createStoreWithMiddleware = applyMiddleware(reduxRouterMiddleware)(createStore)
 
-export const store = createStoreWithMiddleware(rootReducer)
+const fakeProducts = [
+  { name: 'Bananas', price: '9.99'},
+  { name: 'Apples', price: '8.99'},
+  { name: 'Pears', price: '7.99'},
+]
+
+const initialState = {
+  products: fakeProducts,
+  activeProduct: null
+}
+
+export default createStoreWithMiddleware(rootReducer, initialState)

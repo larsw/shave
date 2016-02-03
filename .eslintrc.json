@@ -1,0 +1,19 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "indent": [2,2]
+  }
+}
